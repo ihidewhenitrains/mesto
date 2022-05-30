@@ -1,0 +1,4 @@
+.profile__avatar {
+    object-fit: cover;
+    object-position: center;
+}

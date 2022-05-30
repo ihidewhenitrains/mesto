@@ -1,0 +1,11 @@
+.profile-info {
+    padding-left: 30px;
+    display: grid;
+    grid-template-areas:
+        "name edit"
+        "description description";
+    column-gap: 18px;
+    row-gap: 16px;
+    grid-template-rows: min-content min-content;
+    grid-template-columns: 1fr max-content;
+}
