@@ -9,3 +9,11 @@
     grid-template-rows: min-content min-content;
     grid-template-columns: 1fr max-content;
 }
+
+@media screen and (max-width: 767px) {
+    .profile-info {
+        padding: 26px 0 0 0;
+        row-gap: 14px;
+        column-gap: 10px;
+    }
+}

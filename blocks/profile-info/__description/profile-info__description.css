@@ -3,3 +3,10 @@
     font-size: 18px;
     grid-area: description;
 }
+
+@media screen and (max-width: 767px) {
+    .profile-info__description {
+        font-size: 14px;
+        justify-self: center;
+    }
+}

@@ -5,3 +5,9 @@
     grid-area: name;
     line-height: .8;
 }
+
+@media screen and (max-width: 767px) {
+    .profile-info__name {
+        font-size: 27px;
+    }
+}
