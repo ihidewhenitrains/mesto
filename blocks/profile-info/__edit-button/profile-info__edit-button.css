@@ -6,11 +6,18 @@
     background-size: cover;
     width: 24px;
     height: 24px;
-    align-self: end;
+    align-self: center;
     border: none;
 }
 
 .profile-info__edit-button:hover {
     opacity: .6;
     cursor: pointer;
+}
+
+@media screen and (max-width: 767px) {
+    .profile-info__edit-button {
+        width: 18px;
+        height: 18px;
+    }
 }

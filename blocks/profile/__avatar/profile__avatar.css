@@ -1,4 +1,5 @@
 .profile__avatar {
     object-fit: cover;
     object-position: center;
+    max-width: 120px;
 }

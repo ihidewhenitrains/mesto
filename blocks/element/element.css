@@ -6,4 +6,5 @@
     grid-template-columns: 1fr min-content;
     grid-template-rows: max-content 1fr;
     background-color: #FFFFFF;
+    border-radius: 10px;
 }
