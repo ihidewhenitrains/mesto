@@ -6,3 +6,8 @@
     border-top-right-radius: 10px;
     height: 282px;
 }
+
+.element__image:hover {
+    opacity: .9;
+    transition: opacity .2s;
+}

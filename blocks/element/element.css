@@ -10,3 +10,7 @@
     max-height: 361px;
     position: relative;
 }
+
+.element:hover {
+    cursor: pointer;
+}
