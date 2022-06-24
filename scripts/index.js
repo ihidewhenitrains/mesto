@@ -1,5 +1,5 @@
 const profilePopup = document.querySelector('#profile-pop-up');
-const addCardPopup = document.querySelector('#add-card-pop-up');
+const newCardPopup = document.querySelector('#add-card-pop-up');
 const editProfileButton = document.querySelector('.profile-info__edit-button');
 const addCardButton = document.querySelector('.profile__add-button');
 const editProfileCloseButton = document.querySelector('#profile-popup-close-button');
@@ -8,7 +8,7 @@ const previewCloseButton = document.querySelector('#preview-popup-close-button')
 const profileForm = document.querySelector('#profile-form');
 const newCardForm = document.querySelector('#card-form');
 const cardsContainer = document.querySelector('.elements__list');
-const previewPopup = document.querySelector('#preview-pop-up');
+const imagePreviewPopup = document.querySelector('#preview-pop-up');
 const previewImage = document.querySelector('.pop-up__image-preview');
 const previewName = document.querySelector('.pop-up__image-heading');
 const profileJob = document.querySelector('.profile-info__description');
@@ -46,7 +46,7 @@ function createCard(newcard) {
 
     //просмотр картинки
     cardImage.addEventListener('click', function () {
-        openPopup(previewPopup);
+        openPopup(imagePreviewPopup);
         previewImage.src = cardImage.src;
         previewImage.alt = cardImage.alt;
         previewName.textContent = cardName.textContent;
@@ -74,8 +74,8 @@ function openProfilePopup() {
     openPopup(profilePopup);
 }
 
-function openAddCardPopup() {
-    openPopup(addCardPopup);
+function openNewCardPopup() {
+    openPopup(newCardPopup);
 }
 
 
@@ -88,12 +88,12 @@ function closeProfilePopup() {
     closePopup(profilePopup);
 }
 
-function closeAddCardPopup() {
-    closePopup(addCardPopup);
+function closeNewCardPopup() {
+    closePopup(newCardPopup);
 }
 
-function closePreviewPopup() {
-    closePopup(previewPopup);
+function closeImagePreviewPopup() {
+    closePopup(imagePreviewPopup);
 }
 
 
@@ -119,18 +119,18 @@ function newCardFormSubmitHandler(evt) {
 
     addCard(newcard);
     newCardForm.reset();
-    closeAddCardPopup();
+    closeNewCardPopup();
 }
 
 
 //Обработчики событий
 
 editProfileButton.addEventListener('click', openProfilePopup);
-addCardButton.addEventListener('click', openAddCardPopup);
+addCardButton.addEventListener('click', openNewCardPopup);
 
 editProfileCloseButton.addEventListener('click', closeProfilePopup);
-addCardCloseButton.addEventListener('click', closeAddCardPopup);
-previewCloseButton.addEventListener('click', closePreviewPopup);
+addCardCloseButton.addEventListener('click', closeNewCardPopup);
+previewCloseButton.addEventListener('click', closeImagePreviewPopup);
 
 profileForm.addEventListener('submit', profileFormSubmitHandler);
 newCardForm.addEventListener('submit', newCardFormSubmitHandler);
