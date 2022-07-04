@@ -33,6 +33,9 @@
 @import url(../blocks/pop-up/__input/_type/_name/pop-up__input_type_name.css);
 @import url(../blocks/pop-up/__input/_type/_job/pop-up__input_type_job.css);
 @import url(../blocks/pop-up/__input/_type/_image-link/pop-up__input_type_image-link.css);
+@import url(../blocks/pop-up/__input/_type/_error/pop-up__input_type_error.css);
+@import url(../blocks/pop-up/__input-error/pop-up__input-error.css);
+@import url(../blocks/pop-up/__input-error/_active/pop-up__input-error_active.css);
 @import url(../blocks/pop-up/__save-button/pop-up__save-button.css);
 @import url(../blocks/pop-up/__preview/pop-up__preview.css);
 @import url(../blocks/pop-up/__image-heading/pop-up__image-heading.css);

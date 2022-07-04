@@ -90,6 +90,7 @@ function closeProfilePopup() {
 
 function closeNewCardPopup() {
     closePopup(newCardPopup);
+    newCardForm.reset();
 }
 
 function closeImagePreviewPopup() {
