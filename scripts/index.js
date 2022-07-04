@@ -125,7 +125,6 @@ function newCardFormSubmitHandler(evt) {
 
 
 //Обработчики событий
-
 editProfileButton.addEventListener('click', openProfilePopup);
 addCardButton.addEventListener('click', openNewCardPopup);
 

@@ -1,5 +1,5 @@
 //показать ошибку
-function showInputError(formElement, inputElement, errorMessage) {
+function showInputError(inputElement) {
     inputElement.classList.add('pop-up__input_type_error');
 }
 
@@ -31,7 +31,7 @@ function setEventListeners(formElement) {
 function enableValidation() {
     const formList = Array.from(document.querySelectorAll('.pop-up__form'));
     formList.forEach((formElement) => {
-        formElement.addEventListener('submit', function(evt) {
+        formElement.addEventListener('submit', function (evt) {
             evt.preventDefault();
         })
         setEventListeners(formElement);
