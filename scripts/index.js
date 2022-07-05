@@ -2,9 +2,6 @@ const profilePopup = document.querySelector('#profile-pop-up');
 const newCardPopup = document.querySelector('#add-card-pop-up');
 const editProfileButton = document.querySelector('.profile-info__edit-button');
 const addCardButton = document.querySelector('.profile__add-button');
-const editProfileCloseButton = document.querySelector('#profile-popup-close-button');
-const addCardCloseButton = document.querySelector('#addcard-popup-close-button');
-const previewCloseButton = document.querySelector('#preview-popup-close-button');
 const profileForm = document.querySelector('#profile-form');
 const newCardForm = document.querySelector('#card-form');
 const cardsContainer = document.querySelector('.elements__list');
@@ -88,6 +85,7 @@ function closePopup(popup) {
         form.reset();
     };
 }
+
 
 function setClosePopupListeners() {
     const popupList = Array.from(document.querySelectorAll('.pop-up'));

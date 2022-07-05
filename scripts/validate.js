@@ -1,3 +1,11 @@
+const validationConfig = {
+    formSelector: '.pop-up__form',
+    inputSelector: '.pop-up__input',
+    submitButtonSelector: '.pop-up__save-button',
+    inputErrorClass: 'pop-up__input_type_error',
+    errorClass: 'pop-up__input-error_active'
+}
+
 //показать ошибку
 function showInputError(formElement, inputElement, errorMessage) {
     const errorElement = formElement.querySelector(`.${inputElement.id}-error`)
@@ -67,16 +75,3 @@ function toggleButtonState(inputList, buttonElement) {
 }
 
 enableValidation();
-
-
-// включение валидации вызовом enableValidation
-// все настройки передаются при вызове
-
-//enableValidation({
-//   formSelector: '.popup__form',
-//    inputSelector: '.popup__input',
-//    submitButtonSelector: '.popup__button',
-//    inactiveButtonClass: 'popup__button_disabled',
-//    inputErrorClass: 'popup__input_type_error',
-//    errorClass: 'popup__error_visible'
-//  });
