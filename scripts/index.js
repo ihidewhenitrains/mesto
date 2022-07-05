@@ -80,22 +80,50 @@ function openNewCardPopup() {
 
 
 //Закрытие поп-апов
+
+//закрыть кликом на оверлей
+function closePopupOnOverlayClick(evt) {
+    if (evt.target === evt.currentTarget) {
+        const closestPopup = evt.target.closest('.pop-up');
+        closePopup(closestPopup);
+    }
+}
+
+//закрыть нажатием на кнопку
+
+
+
+function setExtraClosePopupListeners() {
+    const popupList = Array.from(document.querySelectorAll('.pop-up'));
+
+    popupList.forEach((popup) => {
+        const closeButton = popup.querySelector('.pop-up__close-button');
+
+        popup.addEventListener('click', closePopupOnOverlayClick);
+        closeButton.addEventListener('click', closePopup);
+    });
+}
+
+setExtraClosePopupListeners();
+
+//////
+
 function closePopup(popup) {
-    popup.classList.remove('pop-up_opened');
+    popup.classList.remove('pop-up_opened')
+    popup.querySelector('.pop-up__form').reset();
 }
 
-function closeProfilePopup() {
-    closePopup(profilePopup);
-}
+//function closeProfilePopup() {
+//    closePopup(profilePopup);
+//}
 
-function closeNewCardPopup() {
-    closePopup(newCardPopup);
-    newCardForm.reset();
-}
+//function closeNewCardPopup() {
+//    closePopup(newCardPopup);
+//}
 
-function closeImagePreviewPopup() {
-    closePopup(imagePreviewPopup);
-}
+//function closeImagePreviewPopup() {
+//   closePopup(imagePreviewPopup);
+//}
 
 
 //Кнопка "Сохранить" для редактирования профиля
@@ -125,12 +153,18 @@ function newCardFormSubmitHandler(evt) {
 
 
 //Обработчики событий
+
+//открыть поп-ап
 editProfileButton.addEventListener('click', openProfilePopup);
 addCardButton.addEventListener('click', openNewCardPopup);
+
+//закрыть поп-ап
+
 
 editProfileCloseButton.addEventListener('click', closeProfilePopup);
 addCardCloseButton.addEventListener('click', closeNewCardPopup);
 previewCloseButton.addEventListener('click', closeImagePreviewPopup);
 
+//отправить форму
 profileForm.addEventListener('submit', profileFormSubmitHandler);
 newCardForm.addEventListener('submit', newCardFormSubmitHandler);

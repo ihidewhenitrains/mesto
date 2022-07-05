@@ -1,3 +1,4 @@
 .pop-up__input-error {
-    height: 22px;
+    position: absolute;
+    top: 26px;
 }
