@@ -56,8 +56,11 @@ function addCard(card) {
 
 //Открытие поп-апов
 function openPopup(popup) {
+    const button = popup.querySelector(validationConfig.submitButtonSelector);
+
     popup.classList.add('pop-up_opened');
     document.addEventListener('keydown', closePopupOnEsc);
+    disableSubmitButton(button);  //чтобы при открытии кнопка была неактивной
 }
 
 function openProfilePopup() {
@@ -78,14 +81,14 @@ function closePopup(popup) {
     document.removeEventListener('keydown', closePopupOnEsc);
 }
 
-function closePopupOnEsc(evt) {                           //нажатие на esc
+function closePopupOnEsc(evt) {     //нажатие на esc
     if (evt.key === 'Escape') {
         const popup = document.querySelector('.pop-up_opened');
         closePopup(popup);
     };
 }
 
-function closePopupOnOverlayOrButton(evt) {               //клик на оверлей или кнопку закрытия
+function closePopupOnOverlayOrButton(evt) {     //клик на оверлей или кнопку закрытия
     if (evt.target.classList.contains('pop-up') || evt.target.classList.contains('pop-up__close-button')) {
         const popup = document.querySelector('.pop-up_opened');
         closePopup(popup);

@@ -74,4 +74,9 @@ function toggleButtonState(inputList, buttonElement) {
     }
 }
 
+function disableSubmitButton(buttonElement) {  //просто выключение кнопки
+    buttonElement.setAttribute('disabled', 'disabled');
+}
+
+
 enableValidation(validationConfig);
