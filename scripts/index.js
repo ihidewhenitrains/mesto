@@ -15,6 +15,8 @@ const jobInput = document.querySelector('.pop-up__input_type_job');
 const cardNameInput = document.querySelector('#card-name-input');
 const cardImageLinkInput = document.querySelector('.pop-up__input_type_image-link');
 const cardTemplate = document.querySelector('#element-template').content.querySelector('.element');
+const editProfileSubmitButton = document.querySelector('#profile-form-save-button');
+const addCardSubmitButton = document.querySelector('#add-card-save-button');
 
 //Создание новой карточки (+ кнопки лайка и удаления, просмотр карточки)
 function createCard(newcard) {
@@ -56,11 +58,8 @@ function addCard(card) {
 
 //Открытие поп-апов
 function openPopup(popup) {
-    const button = popup.querySelector(validationConfig.submitButtonSelector);
-
     popup.classList.add('pop-up_opened');
     document.addEventListener('keydown', closePopupOnEsc);
-    disableSubmitButton(button);  //чтобы при открытии кнопка была неактивной
 }
 
 function openProfilePopup() {
@@ -121,6 +120,7 @@ function profileFormSubmitHandler(evt) {
 
     closePopup(profilePopup);
     formReset(profilePopup);
+    disableSubmitButton(editProfileSubmitButton);
 }
 
 
@@ -136,6 +136,7 @@ function newCardFormSubmitHandler(evt) {
     addCard(newcard);
     closePopup(newCardPopup);
     formReset(newCardPopup);
+    disableSubmitButton(addCardSubmitButton);
 }
 
 
